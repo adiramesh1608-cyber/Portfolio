@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adithya Ramesh | Portfolio</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f5f6fa;
+            color: #627a9b;
+            scroll-behavior: smooth;
+        }
+
+        /* Header & Navbar */
+        header {
+            background-color: #1e272e;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00a8ff;
+            border-bottom: 2px solid #00a8ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(to right, #00a8ff, #9c88ff);
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #fff;
+            color: #00a8ff;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #00a8ff;
+            color: #fff;
+        }
+
+        /* About Section */
+        #about {
+            padding: 80px 20px;
+            background-color: #f1f2f6;
+        }
+
+        #about h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1e272e;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about img {
+            width: 250px;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .about-text {
+            max-width: 600px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #2f3640;
+        }
+
+        /* Skills Section */
+        #skills {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #skills h2 {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #1e272e;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .skill {
+            background-color: #fff;
+            padding: 25px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: 220px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        .skill h3 {
+            color: #00a8ff;
+            margin-bottom: 10px;
+        }
+
+        /* Projects Section */
+        #projects {
+            padding: 80px 20px;
+            background-color: #f1f2f6;
+            text-align: center;
+        }
+
+        #projects h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1e272e;
+        }
+
+        #projects p {
+            font-size: 1.1rem;
+            color: #2f3640;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #1e272e;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact a {
+            color: #00a8ff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e272e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsive Design */
+        @media(max-width: 768px) {
+            .about {
+                flex-direction: column;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <h2>Hello, I'm <span style="color: #fff;">Adithya Ramesh</span></h2>
+        <p>A Passionate Developer | Designer | Creator</p>
+        <a class="btn" href="#projects">View My Work</a>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about">
+            <img src="./WhatsApp Image 2025-09-11 at 13.08.19_a63e6498.jpg" alt="Profile Photo" />
+            <div class="about-text">
+                <p>Hi, I'm <strong>Adithya Ramesh, a Second Year Student</strong> of <strong>Computer Science Engineer</strong> at <strong>St. Joseph's Institute Of Technology</strong>. I specialize in building modern, <strong>responsive, and user-friendly websites</strong>. I have done <strong>UI/UX Design at Retech Solutions Private Limited Company in Chennai</strong>. I love combining creativity and technology to deliver amazing experiences.</p>
+                <p>I have learned <strong>Artificial Intelligence & Machine Learning</strong> and am also learning Web Development. I am always eager to learn new things and improve my skills, <strong>trying to create new things with my ideas.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>HTML & CSS</h3>
+                <p>Creating Responsive design and clean UI layouts.</p>
+            </div>
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Interactive web apps & friendly features.</p>
+            </div>
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Data analysis, scripting & automation.</p>
+            </div>
+            <div class="skill">
+                <h3>C Language</h3>
+                <p>Fundamentals of programming and problem-solving.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+        <p>Soon I will update my projects on my portfolio.....</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact">
+            <p>Email: <a href="mailto:adiramesh1608@gmail.com">adiramesh1608@gmail.com</a></p>
+            <p>LinkedIn: <a href="#">linkedin.com/in/adithya-ramesh-543b36356/</a></p>
+            <p>GitHub: <a href="#">https://github.com/adiramesh1608-cyber</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Adithya Ramesh | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
